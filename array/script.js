@@ -41,12 +41,12 @@ console.log(arr);
 const main = document.getElementById("main"); // seleziono il div con id main e lo conservo 
 const crcontainer = document.createElement("div"); // creo un elemento div e mi salvo tutto il procedimento in una costante
 crcontainer.classList.add("container"); // aggiungo una classe all'elemento mentre lo creo
-main.appendChild(crcontainer);// aggiungo al div prima selezionato un child
+main.appendChild(crcontainer);// aggiungo al div prima selezionato, un child
 const crdiv = document.createElement("div");// uguale a crcontainer
 const crparag = document.createElement("p");// uguale a crcontainer
 crcontainer.appendChild(crdiv);// stesso concetto
 crdiv.appendChild(crparag);// stesso concetto 
-
+crparag.innerHTML = 'Lezione 2'// innerHTML è un metodo che mi permette di scrivere qualcosa all'interno della pagina HTML.
 
 
 
@@ -61,7 +61,7 @@ crdiv.appendChild(crparag);// stesso concetto
 for(let i =0;i<arr.length;i++){ // creo un ciclo che esegue istruzione tante volte finchè non arrivo alla lunghezza dell'array
 
 const crdiv = document.createElement("div");
-const crparag = document.createElement("p");              // definisco logicamente quello che devo fare per ogni volta che eseguo il ciclo, in questo caso per quanto è lungo l'array
+const crparag = document.createElement("p");   // definisco logicamente quello che devo fare per ogni volta che eseguo il ciclo, in questo caso per quanto è lungo l'array
     crcontainer.appendChild(crdiv);
     crdiv.appendChild(crparag);
     crparag.innerHTML = `${arr[i]}`// aggiungo al paragrafo il valore dell'array in posizione i
